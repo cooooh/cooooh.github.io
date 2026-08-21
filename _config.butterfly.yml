@@ -153,7 +153,7 @@ index_top_img_height:
 subtitle:
   enable: true
   # Typewriter Effect
-  effect: true
+  effect: false
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
@@ -168,7 +168,6 @@ subtitle:
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
     - 人生到处知何似，应似飞鸿踏雪泥。
-    - 记录所学 · 所做 · 所感
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
