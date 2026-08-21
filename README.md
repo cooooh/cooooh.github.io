@@ -2,7 +2,7 @@
 
 > 人生到处知何似，应似飞鸿踏雪泥。
 
-个人博客，基于 **Hexo + Butterfly 主题**，部署于 GitHub Pages。
+个人博客，基于 **Hexo + Butterfly 主题**，部署于 GitHub Pages，访问地址 **https://snowtrace.top**。
 
 - 记录：知识（计算机学习笔记）/ 项目 / 生活
 - 功能：标签分类、全文搜索、网易云音乐播放器、暗色模式
@@ -143,7 +143,7 @@ Snowtrace/
 
 ## 首次部署到 GitHub Pages（只需做一次）
 
-> 目标：博客地址将是 `https://cooooh.github.io`
+> 目标：博客地址 `https://snowtrace.top`（GitHub Pages 仓库是 `cooooh.github.io`）
 
 1. **在 GitHub 上建仓库**：登录 github.com → 右上角 `+` → New repository
    - Repository name 填 **`cooooh.github.io`**（必须一字不差，这是用户名专属主页仓库）
@@ -157,7 +157,13 @@ Snowtrace/
 
    > 如果推送时连不上 GitHub（国内网络常见），需要先开启代理后再执行，或使用 GitHub 加速工具。
 3. **开启 Pages**：仓库页面 → Settings → Pages → Build and deployment 的 Source 选 **Deploy from a branch**，Branch 选 **`gh-pages`** 文件夹选 `/ (root)` → Save
-4. 之后每次 `git push`，Actions 会自动构建部署，1~2 分钟后即可在 `https://cooooh.github.io` 看到更新 ✅
+4. 之后每次 `git push`，Actions 会自动构建部署，1~2 分钟后即可在 `https://snowtrace.top` 看到更新 ✅
+
+### 绑定自定义域名 snowtrace.top（已完成一次）
+
+- 域名 DNS 在阿里云控制台解析：4 条 A 记录（`185.199.108.153` / `185.199.109.153` / `185.199.110.153` / `185.199.111.153`）+ 1 条 CNAME（`www` → `cooooh.github.io`）
+- 仓库里的 `source/CNAME` 文件与 `.github/workflows/deploy.yml` 里的 `cname:` 参数共同保证部署后 GitHub Pages 认出这个域名
+- 换新域名时：改上述两处 + `_config.yml` 的 `url` + 阿里云解析即可
 
 > 首次推送后如果 Actions 显示红色失败，多半是网络问题导致依赖装不上，重新运行一次（Actions 页面 → 失败的工作流 → Re-run jobs）即可。
 
