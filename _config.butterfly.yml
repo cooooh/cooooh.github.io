@@ -1067,7 +1067,7 @@ inject:
     - <link rel="stylesheet" href="/css/changelog.css">
   bottom:
     # 全局网易云音乐播放器：改歌单时把 data-id 换成你的歌单 ID（README 有教程）
-    - '<meting-js class="aplayer" data-server="netease" data-type="playlist" data-id="2338560987" data-api="https://api.injahow.cn/meting/" data-fixed="true" data-mini="false" data-autoplay="false" data-order="list" data-preload="auto" data-volume="0.7" data-theme="#49b1f5" data-loop="all" data-listfolded="true" data-listmaxheight="340px" data-lrctype="0" data-mutex="true"></meting-js>'
+    - '<meting-js class="aplayer" data-server="netease" data-type="playlist" data-id="2338560987" data-api="https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;r=:r" data-fixed="true" data-mini="false" data-autoplay="false" data-order="list" data-preload="auto" data-volume="0.7" data-theme="#49b1f5" data-loop="all" data-listfolded="true" data-listmaxheight="340px" data-lrctype="0" data-mutex="true"></meting-js>'
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
 
