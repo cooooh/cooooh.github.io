@@ -23,6 +23,7 @@ menu:
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
   友链: /link/ || fas fa-link
+  音乐: /music/ || fas fa-music
   关于||fas fa-heart:
     关于我: /about/ || fas fa-user
     更新日志: /log/ || fas fa-scroll
@@ -997,7 +998,7 @@ pjax:
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: true
-  per_page: true
+  per_page: false
 
 # Snackbar - Toast Notification
 # https://github.com/polonel/SnackBar
@@ -1065,11 +1066,13 @@ inject:
   head:
     # 更新日志弹窗样式
     - <link rel="stylesheet" href="/css/changelog.css">
+    # 音乐页样式（黑胶唱片效果）
+    - <link rel="stylesheet" href="/css/music.css">
   bottom:
-    # 全局网易云音乐播放器：改歌单时把 data-id 换成你的歌单 ID（README 有教程）
-    - '<meting-js class="aplayer" data-server="netease" data-type="playlist" data-id="2338560987" data-api="https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;r=:r" data-fixed="true" data-mini="false" data-autoplay="false" data-order="list" data-preload="auto" data-volume="0.7" data-theme="#49b1f5" data-loop="all" data-listfolded="true" data-listmaxheight="340px" data-lrctype="0" data-mutex="true"></meting-js>'
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
+    # 音乐页脚本（播放器与唱片联动）
+    - <script src="/js/music-page.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work

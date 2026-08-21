@@ -72,19 +72,12 @@ git push
 | `_config.yml` | 站点配置（标题、作者、语言等） |
 | `_config.butterfly.yml` | 主题配置（导航、头像、音乐、暗色模式等） |
 
-### 改网易云歌单
+### 音乐页（导航「音乐」）
 
-1. 网易云音乐 App → 找到你的歌单 → 右上角分享 → 复制链接
-2. 链接里的 `id=` 后面那串数字就是歌单 ID
-3. 打开 `_config.butterfly.yml`，搜索 `meting-js`，把 `data-id="2338560987"` 改成你的歌单 ID：
-
-```yaml
-inject:
-  bottom:
-    - '<meting-js class="aplayer" data-server="netease" data-type="playlist" data-id="你的歌单ID" ...></meting-js>'
-```
-
-> 播放器默认放在页面左下角，点开即可展开歌单。想放单曲的话，把 `data-type="playlist"` 改为 `data-type="song"` 并填歌曲 ID。
+- 独立的音乐播放页：`source/music/index.md`，黑胶唱片会随播放旋转发光
+- **改歌单**：编辑 `source/js/music-page.js`，找到 `data-id` 那一行，把 `2338560987` 换成你的歌单 ID
+- 网易云歌单 ID 获取：网易云 App → 歌单 → 分享 → 复制链接，链接里 `id=` 后面的数字就是
+- 唱片封面自动跟随当前歌曲显示，播放器本身只在音乐页加载，不影响其他页面速度
 
 ### 更新日志（导航「关于 → 更新日志」弹窗）
 
