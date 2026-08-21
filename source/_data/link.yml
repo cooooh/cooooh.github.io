@@ -1,0 +1,10 @@
+# 友链数据文件
+# 添加好友的博客时，按下面的格式写（把注释去掉），保存后重新部署即可
+#
+# - class_name: 朋友们
+#   class_desc: 我的好朋友们
+#   link_list:
+#     - name: 站点名称
+#       link: https://example.com
+#       avatar: https://example.com/avatar.png
+#       descr: 一句话描述

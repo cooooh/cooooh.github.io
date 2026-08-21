@@ -1,0 +1,34 @@
+{
+  "name": "snowtrace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Snowtrace · 人生到处知何似，应似飞鸿踏雪泥。",
+  "scripts": {
+    "new": "hexo new",
+    "server": "hexo server",
+    "generate": "hexo generate",
+    "clean": "hexo clean"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "aplayer": "^1.10.1",
+    "butterfly-extsrc": "^1.1.6",
+    "hexo": "^7.3.0",
+    "hexo-butterfly-extjs": "^1.5.8",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-butterfly": "^5.5.5",
+    "hexo-wordcount": "^6.0.1",
+    "typed.js": "^3.0.0"
+  }
+}
