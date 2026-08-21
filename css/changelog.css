@@ -1,0 +1,102 @@
+/* Snowtrace 更新日志弹窗样式（自动适配亮/暗色模式） */
+
+#changelog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+#changelog-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.changelog-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(560px, 92vw);
+  max-height: 72vh;
+  background: var(--card-bg);
+  color: var(--font-color);
+  border-radius: 12px;
+  box-shadow: 0 12px 42px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.25s ease;
+}
+
+#changelog-overlay.active .changelog-dialog {
+  transform: none;
+}
+
+.changelog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--hr-border);
+}
+
+.changelog-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.changelog-title i {
+  margin-right: 8px;
+  color: #49b1f5;
+}
+
+.changelog-close {
+  border: none;
+  background: none;
+  color: var(--font-color);
+  font-size: 15px;
+  line-height: 1;
+  padding: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.changelog-close:hover {
+  opacity: 1;
+}
+
+.changelog-body {
+  padding: 14px 20px 20px;
+  overflow-y: auto;
+}
+
+.changelog-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.changelog-body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 3px;
+}
+
+.changelog-body .timeline {
+  margin: 0;
+}
+
+.changelog-body ul {
+  margin: 4px 0;
+}
+
+.changelog-loading,
+.changelog-error {
+  text-align: center;
+  padding: 24px 0;
+  opacity: 0.75;
+}
