@@ -148,6 +148,34 @@ Snowtrace/
 
 ---
 
+## 查看更新日志
+
+### 部署日志（每次 push 后）
+
+1. 打开 GitHub 仓库 → 顶部 **Actions** 标签页
+2. 列表里每一行就是一次推送的构建记录：
+   - 🟡 进行中（正在构建，通常 1~2 分钟）
+   - 🟢 绿色 ✓ 成功（线上已更新）
+   - 🔴 红色 ✗ 失败（线上保持旧版本，不影响访问）
+3. 点进任意一条 → 点 **build-and-deploy** → 展开每一步看详细日志：
+   - `Install dependencies`：装依赖失败通常是网络问题，点 Re-run jobs 重跑
+   - `Build`：文章或配置写错会在这里报错（日志会指出具体哪个文件）
+   - `Deploy to GitHub Pages`：成功即代表新版本已推送到 gh-pages 分支
+4. 失败时 GitHub 默认也会发邮件通知你
+
+### 本地日志
+
+- `npm run server` / `npm run generate` 的输出就是本地日志
+- 报错信息看不懂时，加 `-- --debug` 输出更详细：`npx hexo generate --debug`
+- 改配置后没生效：先 `npm run clean` 再重新运行
+
+### 更新历史
+
+- 本地查看：`git log --oneline`（每次提交一行）；`git log -p` 看具体改动
+- 网页查看：GitHub 仓库 → 点左上角 **commits**（提交历史）
+
+---
+
 ## 故障排查
 
 - **改配置后页面没变**：先 `npm run clean` 再 `npm run server`
