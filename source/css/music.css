@@ -1,10 +1,43 @@
 /* Snowtrace 音乐页样式（黑胶唱片 + 播放联动效果） */
 
 .music-stage {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8px 0 24px;
+}
+
+/* 背景光斑：让亚克力磨砂效果有内容可透 */
+.music-stage::before,
+.music-stage::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(36px);
+  pointer-events: none;
+}
+
+.music-stage::before {
+  width: 240px;
+  height: 240px;
+  background: rgba(126, 200, 247, 0.55);
+  top: 60px;
+  left: 2%;
+}
+
+.music-stage::after {
+  width: 220px;
+  height: 220px;
+  background: rgba(247, 184, 216, 0.5);
+  top: 190px;
+  right: 2%;
+}
+
+.music-stage > * {
+  position: relative;
+  z-index: 1;
 }
 
 .vinyl {
@@ -75,8 +108,35 @@
   width: min(640px, 100%);
 }
 
+/* 播放器卡片：圆角 + 亚克力磨砂玻璃 */
 #music-player .aplayer {
   margin: 0;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  backdrop-filter: blur(18px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
   box-shadow: var(--card-box-shadow);
+}
+
+/* 歌曲封面小图：圆角 */
+#music-player .aplayer .aplayer-pic {
+  border-radius: 10px;
+}
+
+/* 歌单面板：同样亚克力 */
+#music-player .aplayer .aplayer-list {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  backdrop-filter: blur(18px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+}
+
+#music-player .aplayer .aplayer-list li:hover {
+  background: rgba(73, 177, 245, 0.14);
+}
+
+#music-player .aplayer .aplayer-list li.aplayer-list-light {
+  background: rgba(73, 177, 245, 0.12);
 }
