@@ -76,7 +76,7 @@ git push
 
 1. 网易云音乐 App → 找到你的歌单 → 右上角分享 → 复制链接
 2. 链接里的 `id=` 后面那串数字就是歌单 ID
-3. 打开 `_config.butterfly.yml`，搜索 `meting-js`，把 `data-id="60198"` 改成你的歌单 ID：
+3. 打开 `_config.butterfly.yml`，搜索 `meting-js`，把 `data-id="2338560987"` 改成你的歌单 ID：
 
 ```yaml
 inject:
@@ -85,6 +85,14 @@ inject:
 ```
 
 > 播放器默认放在页面左下角，点开即可展开歌单。想放单曲的话，把 `data-type="playlist"` 改为 `data-type="song"` 并填歌曲 ID。
+
+### 更新日志（导航「关于 → 更新日志」弹窗）
+
+- 日志内容在 `source/log/index.md`，按里面 `timeline` 的格式添加新条目即可，和写文章一样简单
+- 弹窗样式在 `source/css/changelog.css`，脚本在 `source/js/changelog-modal.js`，一般不用动
+- 该页也可以直接访问：`/log/`
+
+> ⚠️ 修改 `_config.butterfly.yml` 后，本地预览需要**重启** `npm run server` 才能看到变化（改文章和页面不用）。
 
 ### 换头像
 
