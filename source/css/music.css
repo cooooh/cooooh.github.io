@@ -44,6 +44,7 @@
   position: relative;
   width: 200px;
   height: 200px;
+  margin-bottom: 26px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -92,18 +93,6 @@
   }
 }
 
-.vinyl-text {
-  margin: 16px 0 20px;
-  font-size: 14px;
-  opacity: 0.6;
-  color: var(--font-color);
-}
-
-.vinyl-text i {
-  margin-right: 6px;
-  color: #49b1f5;
-}
-
 #music-player {
   width: min(640px, 100%);
 }
@@ -139,4 +128,10 @@
 
 #music-player .aplayer .aplayer-list li.aplayer-list-light {
   background: rgba(73, 177, 245, 0.12);
+}
+
+/* 歌单与正在播放的信息之间留出间距 */
+#music-player .aplayer .aplayer-list ol {
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
