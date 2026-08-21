@@ -126,6 +126,28 @@ Snowtrace/
 
 ---
 
+## 首次部署到 GitHub Pages（只需做一次）
+
+> 目标：博客地址将是 `https://cooooh.github.io`
+
+1. **在 GitHub 上建仓库**：登录 github.com → 右上角 `+` → New repository
+   - Repository name 填 **`cooooh.github.io`**（必须一字不差，这是用户名专属主页仓库）
+   - 选 **Public**，不要勾选任何初始化选项（README/gitignore 都不要），点 Create
+2. **本地关联并推送**（在本博客目录打开终端）：
+
+   ```bash
+   git remote add origin https://github.com/cooooh/cooooh.github.io.git
+   git push -u origin main
+   ```
+
+   > 如果推送时连不上 GitHub（国内网络常见），需要先开启代理后再执行，或使用 GitHub 加速工具。
+3. **开启 Pages**：仓库页面 → Settings → Pages → Build and deployment 的 Source 选 **Deploy from a branch**，Branch 选 **`gh-pages`** 文件夹选 `/ (root)` → Save
+4. 之后每次 `git push`，Actions 会自动构建部署，1~2 分钟后即可在 `https://cooooh.github.io` 看到更新 ✅
+
+> 首次推送后如果 Actions 显示红色失败，多半是网络问题导致依赖装不上，重新运行一次（Actions 页面 → 失败的工作流 → Re-run jobs）即可。
+
+---
+
 ## 故障排查
 
 - **改配置后页面没变**：先 `npm run clean` 再 `npm run server`

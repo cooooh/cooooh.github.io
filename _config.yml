@@ -11,7 +11,7 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL — 部署到 GitHub Pages 后改成你的实际地址（如 https://用户名.github.io）
-url: https://yourname.github.io
+url: https://cooooh.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
