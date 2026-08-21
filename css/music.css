@@ -1,0 +1,82 @@
+/* Snowtrace 音乐页样式（黑胶唱片 + 播放联动效果） */
+
+.music-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0 24px;
+}
+
+.vinyl {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-radial-gradient(circle at 50% 50%, #161616 0 2px, #0d0d0d 2px 4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  animation: vinyl-spin 18s linear infinite;
+  animation-play-state: paused;
+  transition: box-shadow 0.4s ease;
+}
+
+/* 播放时：唱片旋转 + 蓝色光晕 */
+.vinyl.playing {
+  animation-play-state: running;
+  box-shadow: 0 0 42px rgba(73, 177, 245, 0.5);
+}
+
+.vinyl::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e8e8e8;
+}
+
+.vinyl-inner {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #1d1d1d;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.12);
+}
+
+.vinyl-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes vinyl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-text {
+  margin: 16px 0 20px;
+  font-size: 14px;
+  opacity: 0.6;
+  color: var(--font-color);
+}
+
+.vinyl-text i {
+  margin-right: 6px;
+  color: #49b1f5;
+}
+
+#music-player {
+  width: min(640px, 100%);
+}
+
+#music-player .aplayer {
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: var(--card-box-shadow);
+}
