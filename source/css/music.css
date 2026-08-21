@@ -100,17 +100,23 @@
 /* 播放器卡片：圆角 + 亚克力磨砂玻璃 */
 #music-player .aplayer {
   margin: 0;
-  background: rgba(255, 255, 255, 0.55);
-  -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  backdrop-filter: blur(18px) saturate(1.5);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(238, 247, 255, 0.66) 100%);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  backdrop-filter: blur(20px) saturate(1.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 16px;
-  box-shadow: var(--card-box-shadow);
+  box-shadow: 0 8px 28px rgba(64, 128, 180, 0.16);
 }
 
-/* 歌曲封面小图：圆角 */
+/* 正在播放栏：更亮的玻璃高光，与歌单和背景拉开层次 */
+#music-player .aplayer .aplayer-body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+
+/* 歌曲封面小图：圆角 + 轻微浮起 */
 #music-player .aplayer .aplayer-pic {
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* 歌单面板：同样亚克力 */
