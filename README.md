@@ -87,9 +87,23 @@ git push
 
 > ⚠️ 修改 `_config.butterfly.yml` 后，本地预览需要**重启** `npm run server` 才能看到变化（改文章和页面不用）。
 
-### 换头像
+### 个人设置（站内换头像 / 首页背景）
 
-替换 `source/img/avatar.svg`（或换成 jpg/png，同步修改 `_config.butterfly.yml` 里的 `avatar` 路径）。
+打开「关于」页，底部有一张「🎨 个人设置」卡片：
+
+- **更换头像**：点「选择图片」→「应用」，侧边栏和手机菜单的头像立刻更换
+- **首页背景**：点「选择图片」→「应用」，回首页即可看到新背景
+- 「恢复默认」一键还原；图片会自动压缩后保存在**本机浏览器**里
+
+> ⚠️ 这是纯静态网站，没有服务器数据库，所以设置只对**当前浏览器**生效：
+> 换浏览器、换设备、清除浏览器数据后都会恢复默认；访客看到的仍是默认头像/背景。
+
+**想让所有访问者都看到（全局生效）**，用仓库换图的方式：
+
+- 头像：替换 `source/img/avatar.svg`（文件名保持不变；若换成 jpg/png，再改 `_config.butterfly.yml` 里 `avatar` 的路径）
+- 背景：把图片放进 `source/img/`，然后在 `_config.butterfly.yml` 里给 `background` 填上地址，例如 `background: url(/img/背景.jpg)`
+
+改完推送部署即可。相关代码：面板在 `source/about/index.md`，脚本 `source/js/site-settings.js`，样式 `source/css/settings.css`。
 
 ### 改副标题/公告/友链
 

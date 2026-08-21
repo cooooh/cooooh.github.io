@@ -1,0 +1,226 @@
+/* ================= 首页自定义背景层 ================= */
+
+#snowtrace-home-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* 一层淡淡的白色柔光，保证文字在任何图片上都可读 */
+#snowtrace-home-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* 暗色模式下换成暗色柔光 */
+[data-theme='dark'] #snowtrace-home-bg::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ================= 个人设置卡片 ================= */
+
+.settings-card {
+  position: relative;
+  margin: 1.2rem 0 1rem;
+  padding: 18px 22px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(238, 247, 255, 0.66) 100%);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  backdrop-filter: blur(20px) saturate(1.6);
+  box-shadow: 0 8px 28px rgba(64, 128, 180, 0.16);
+  overflow: hidden;
+}
+
+[data-theme='dark'] .settings-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(30, 33, 40, 0.9) 0%, rgba(24, 32, 44, 0.82) 100%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.settings-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.settings-tip {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 2px;
+  flex-wrap: wrap;
+}
+
+.settings-row + .settings-row {
+  border-top: 1px dashed rgba(128, 128, 128, 0.25);
+}
+
+.settings-info {
+  min-width: 120px;
+}
+
+.settings-name {
+  font-weight: 600;
+}
+
+.settings-desc {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-top: 2px;
+}
+
+/* 头像预览：圆形 */
+.settings-preview.avatar img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 背景预览：小横图 */
+.settings-preview.bg {
+  position: relative;
+  width: 140px;
+  height: 80px;
+  flex: none;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.settings-preview.bg:not(.has-img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  opacity: 0.55;
+  border: 1px dashed rgba(128, 128, 128, 0.4);
+  background: rgba(128, 128, 128, 0.06);
+}
+
+.settings-preview.bg.has-img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.settings-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.settings-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--font-color);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(73, 177, 245, 0.35);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.settings-btn:hover {
+  border-color: #49b1f5;
+  box-shadow: 0 2px 10px rgba(73, 177, 245, 0.25);
+  transform: translateY(-1px);
+}
+
+.settings-btn.primary {
+  background: linear-gradient(135deg, #49b1f5, #3b9fe0);
+  border-color: transparent;
+  color: #fff;
+}
+
+.settings-btn.primary:hover {
+  box-shadow: 0 4px 14px rgba(73, 177, 245, 0.4);
+}
+
+.settings-btn.ghost {
+  background: transparent;
+  border-color: rgba(128, 128, 128, 0.35);
+  opacity: 0.8;
+}
+
+.settings-btn.ghost:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .settings-btn {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.settings-btn input[type='file'] {
+  display: none;
+}
+
+.settings-status {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: var(--theme-color, #49b1f5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  min-height: 0;
+}
+
+.settings-status.show {
+  opacity: 1;
+}
+
+.settings-note {
+  font-size: 12px;
+  line-height: 1.9;
+  opacity: 0.7;
+  margin: 10px 0 2px;
+}
+
+.settings-note code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(73, 177, 245, 0.12);
+}
+
+@media screen and (max-width: 768px) {
+  .settings-row {
+    gap: 10px;
+  }
+
+  .settings-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

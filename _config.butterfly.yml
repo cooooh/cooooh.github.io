@@ -1068,11 +1068,15 @@ inject:
     - <link rel="stylesheet" href="/css/changelog.css">
     # 音乐页样式（黑胶唱片效果）
     - <link rel="stylesheet" href="/css/music.css">
+    # 个人设置（头像/首页背景更换）样式
+    - <link rel="stylesheet" href="/css/settings.css">
   bottom:
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
     # 音乐页脚本（播放器与唱片联动）
     - <script src="/js/music-page.js"></script>
+    # 个人设置脚本（关于页更换头像/首页背景，全局自动应用）
+    - <script src="/js/site-settings.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
