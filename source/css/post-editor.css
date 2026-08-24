@@ -181,7 +181,7 @@
 .pe-btn.primary {
   background: linear-gradient(135deg, #49b1f5, #3b9fe0);
   border-color: transparent;
-  color: #fff;
+  color: #fff !important;
 }
 
 .pe-btn.primary:hover {

@@ -14,7 +14,7 @@
   border-radius: 999px;
   font-size: 13px;
   font-family: inherit;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   background: rgba(90, 100, 120, 0.82);
   -webkit-backdrop-filter: blur(10px);

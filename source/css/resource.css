@@ -13,7 +13,7 @@
   padding: 8px 16px;
   border-radius: 11px;
   font-size: 13px;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   background: linear-gradient(135deg, #49b1f5, #3b9fe0);
   box-shadow: 0 4px 12px rgba(73, 177, 245, 0.28);
@@ -23,7 +23,7 @@
 .resource-add-btn:hover {
   box-shadow: 0 6px 16px rgba(73, 177, 245, 0.42);
   transform: translateY(-1px);
-  color: #fff;
+  color: #fff !important;
 }
 
 .resource-search {
@@ -162,7 +162,7 @@
   border-radius: 9px;
   font-size: 12px;
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
   background: linear-gradient(135deg, #49b1f5, #3b9fe0);
   transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -170,7 +170,7 @@
 .resource-link:hover {
   box-shadow: 0 4px 12px rgba(73, 177, 245, 0.4);
   transform: translateY(-1px);
-  color: #fff;
+  color: #fff !important;
 }
 
 .resource-nolink {
