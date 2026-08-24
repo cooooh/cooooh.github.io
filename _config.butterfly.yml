@@ -1078,6 +1078,8 @@ inject:
     - <link rel="stylesheet" href="/css/resource.css">
     # 导航二级下拉与分类页按钮样式
     - <link rel="stylesheet" href="/css/nav-extend.css">
+    # 删除管理（文章/资源）样式
+    - <link rel="stylesheet" href="/css/delete-manager.css">
   bottom:
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
@@ -1087,6 +1089,8 @@ inject:
     - <script src="/js/site-settings.js"></script>
     # 导航二级下拉 + 分类页写文章入口
     - <script src="/js/nav-enhance.js"></script>
+    # 删除管理脚本（文章列表角标/文章页删除按钮，仅保存过密钥的浏览器可见）
+    - <script src="/js/delete-manager.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
