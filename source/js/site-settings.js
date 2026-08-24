@@ -1,13 +1,14 @@
 /* Snowtrace 个人设置
- * 功能：在「关于」页的「个人设置」卡片中更换头像 / 首页背景
- * 原理：图片压缩后保存在浏览器 localStorage 中，每次打开页面自动应用
- * 说明：设置只对当前浏览器生效；想让所有访问者看到，请替换仓库中的图片文件
+ * 功能：在「个人设置」页更换头像 / 个人简介 / 首页背景
+ * 原理：内容保存在浏览器 localStorage 中，每次打开页面自动应用
+ * 说明：设置只对当前浏览器生效；想让所有访问者看到，请修改仓库中的对应文件
  */
 (function () {
   'use strict'
 
   var LS_AVATAR = 'snowtrace.avatar'
   var LS_HOMEBG = 'snowtrace.homeBg'
+  var LS_BIO = 'snowtrace.bio'
   var DEFAULT_AVATAR = '/img/avatar.svg'
 
   function qsa (sel, root) {
@@ -41,6 +42,32 @@
       if (img.dataset.origSrc) {
         img.src = img.dataset.origSrc
         delete img.dataset.origSrc
+      }
+    })
+  }
+
+  /* ---------- 个人简介 ---------- */
+
+  function bioEls () {
+    // 侧边栏「作者卡片」里的简介
+    return qsa('.author-info-description')
+  }
+
+  function applyBio () {
+    var bio = localStorage.getItem(LS_BIO)
+    if (!bio) return
+    bioEls().forEach(function (el) {
+      if (el.dataset.origBio === undefined) el.dataset.origBio = el.textContent
+      el.textContent = bio
+    })
+  }
+
+  function resetBio () {
+    localStorage.removeItem(LS_BIO)
+    bioEls().forEach(function (el) {
+      if (el.dataset.origBio !== undefined) {
+        el.textContent = el.dataset.origBio
+        delete el.dataset.origBio
       }
     })
   }
@@ -236,12 +263,48 @@
         setStatus('settings-bg-status', '已恢复默认背景')
       })
     }
+
+    /* ---- 个人简介 ---- */
+    var bioInput = document.getElementById('settings-bio-input')
+    if (bioInput) {
+      var savedBio = localStorage.getItem(LS_BIO)
+      if (savedBio) {
+        bioInput.value = savedBio
+      } else {
+        var cur = document.querySelector('.author-info-description')
+        if (cur) bioInput.value = cur.textContent
+      }
+    }
+
+    var bioApply = document.getElementById('settings-bio-apply')
+    if (bioApply) {
+      bioApply.addEventListener('click', function () {
+        var text = bioInput.value.trim()
+        if (!text) { setStatus('settings-bio-status', '简介不能为空'); return }
+        if (!saveOrWarn(LS_BIO, text, 'settings-bio-status')) return
+        applyBio()
+        setStatus('settings-bio-status', '简介已应用 ✓')
+      })
+    }
+
+    var bioReset = document.getElementById('settings-bio-reset')
+    if (bioReset) {
+      bioReset.addEventListener('click', function () {
+        resetBio()
+        if (bioInput) {
+          var cur = document.querySelector('.author-info-description')
+          bioInput.value = cur ? cur.textContent : ''
+        }
+        setStatus('settings-bio-status', '已恢复默认简介')
+      })
+    }
   }
 
   /* ---------- 启动 ---------- */
 
   document.addEventListener('DOMContentLoaded', function () {
     applyAvatar()
+    applyBio()
     applyHomeBg()
     initPanel()
   })
@@ -249,6 +312,7 @@
   // 兼容 pjax（当前未开启，开启后也无需改动）
   document.addEventListener('pjax:complete', function () {
     applyAvatar()
+    applyBio()
     applyHomeBg()
     initPanel()
   })

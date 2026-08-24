@@ -1,43 +1,19 @@
 ---
-title: 关于
+title: 个人设置
 date: 2026-08-21 15:30:00
 top_img: false
 comments: false
 ---
 
-## 你好，我是 Ykcht 👋
+## 个人设置 🎨
 
-欢迎来到 **Snowtrace**。
-
-> 人生到处知何似，应似飞鸿踏雪泥。
-
-这个博客用来记录三件事：
-
-- **知识**：我学到的计算机知识、学习笔记与踩坑记录
-- **项目**：我做过的项目、搭建过程与复盘
-- **生活**：日常随想、读书观影与旅行见闻
-
-### 关于我
-
-<!-- 在这里写一段自我介绍吧，例如：目前在学习什么、对什么感兴趣 -->
-
-- 🌱 正在学习：前端开发 / 计算机基础
-- 🛠 常用工具：VS Code、Git
-- 📮 联系方式：待补充
-
-### 本站
-
-- 由 [Hexo](https://hexo.io/) 驱动，主题 [Butterfly](https://butterfly.js.org/)
-- 托管于 GitHub Pages
-
-## 个人设置
+在这里更换头像、个人简介和首页背景，修改立即生效并保存在当前浏览器中。
 
 <div class="settings-card" id="site-settings">
   <div class="settings-head">
     <span>🎨 个人设置</span>
-    <span class="settings-tip">图片只保存在当前浏览器，不影响其他访客</span>
+    <span class="settings-tip">修改只保存在当前浏览器，不影响其他访客</span>
   </div>
-
   <div class="settings-row">
     <div class="settings-info">
       <div class="settings-name">更换头像</div>
@@ -56,7 +32,20 @@ comments: false
     </div>
     <span class="settings-status" id="settings-avatar-status"></span>
   </div>
-
+  <div class="settings-row">
+    <div class="settings-info">
+      <div class="settings-name">个人简介</div>
+      <div class="settings-desc">显示在侧边栏作者卡片中（80 字内）</div>
+    </div>
+    <div class="settings-bio">
+      <input type="text" id="settings-bio-input" maxlength="80" placeholder="一句话介绍自己">
+    </div>
+    <div class="settings-actions">
+      <button class="settings-btn primary" id="settings-bio-apply" type="button"><i class="fas fa-check"></i> 应用</button>
+      <button class="settings-btn ghost" id="settings-bio-reset" type="button">恢复默认</button>
+    </div>
+    <span class="settings-status" id="settings-bio-status"></span>
+  </div>
   <div class="settings-row">
     <div class="settings-info">
       <div class="settings-name">首页背景</div>
@@ -73,9 +62,9 @@ comments: false
     </div>
     <span class="settings-status" id="settings-bg-status"></span>
   </div>
-
   <p class="settings-note">
     说明：以上设置保存在<b>本机浏览器</b>中，换浏览器、换设备或清除浏览器数据后会恢复默认。
-    若想让<b>所有访问者</b>都看到新头像 / 新背景，请把图片放进仓库 <code>source/img/</code> 并修改 <code>_config.butterfly.yml</code>（头像：<code>avatar.img</code>；背景：<code>background</code>），重新推送部署。
+    若想让<b>所有访问者</b>都看到：头像改 <code>_config.butterfly.yml</code> 的 <code>avatar.img</code>（图片放 <code>source/img/</code>）；
+    简介改 <code>aside.card_author.description</code>；背景给 <code>background</code> 填图片地址，然后重新部署。
   </p>
 </div>

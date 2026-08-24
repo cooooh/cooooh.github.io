@@ -26,7 +26,7 @@ menu:
   音乐: /music/ || fas fa-music
   写文章: /write/ || fas fa-pen-nib
   关于||fas fa-heart:
-    关于我: /about/ || fas fa-user
+    个人设置: /about/ || fas fa-user-cog
     更新日志: /log/ || fas fa-scroll
 
 # --------------------------------------
