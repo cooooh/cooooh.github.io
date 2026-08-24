@@ -1,0 +1,112 @@
+/* ================= 删除管理（仅保存过密钥的浏览器可见） ================= */
+
+/* 管理开关按钮 */
+.snowtrace-mgr-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 999px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(90, 100, 120, 0.82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.snowtrace-mgr-btn:hover {
+  transform: translateY(-1px);
+}
+
+.snowtrace-mgr-btn.on {
+  background: #e0503c;
+}
+
+.snowtrace-mgr-btn.del-post {
+  bottom: 62px;
+  background: rgba(224, 80, 60, 0.9);
+}
+
+/* 列表项删除角标（默认隐藏，管理模式下显示） */
+.recent-post-item,
+.article-sort-item {
+  position: relative;
+}
+
+.snowtrace-del-badge {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(224, 80, 60, 0.92);
+  box-shadow: 0 2px 8px rgba(224, 80, 60, 0.4);
+  transition: transform 0.15s;
+}
+
+.snowtrace-del-badge:hover {
+  transform: scale(1.12);
+}
+
+body.snowtrace-managing .snowtrace-del-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 资源卡片删除角标 */
+.resource-card {
+  position: relative;
+}
+
+.resource-card .snowtrace-del-badge {
+  background: rgba(224, 80, 60, 0.92);
+}
+
+/* 提示气泡 */
+.snowtrace-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%) translateY(16px);
+  z-index: 2000;
+  max-width: 80vw;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #fff;
+  background: rgba(40, 48, 62, 0.92);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.snowtrace-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.snowtrace-toast.ok {
+  background: rgba(46, 158, 91, 0.94);
+}
+
+.snowtrace-toast.err {
+  background: rgba(224, 80, 60, 0.94);
+}
