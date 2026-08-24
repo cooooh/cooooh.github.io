@@ -31,11 +31,13 @@ comments: false
         <input type="text" id="pe-title" placeholder="例如：我的第一篇网页文章">
       </label>
       <label>分类
-        <input type="text" id="pe-category" list="pe-categories" placeholder="知识 / 项目 / 生活">
+        <input type="text" id="pe-category" list="pe-categories" placeholder="知识 / 项目 / 生活（多级用逗号：生活,番剧）">
         <datalist id="pe-categories">
           <option value="知识">
           <option value="项目">
           <option value="生活">
+          <option value="生活,番剧">
+          <option value="生活,小说">
         </datalist>
       </label>
     </div>

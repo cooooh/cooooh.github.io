@@ -95,6 +95,20 @@ git push
 
 相关代码：页面 `source/write/index.md`，脚本 `source/js/post-editor.js`，样式 `source/css/post-editor.css`。
 
+### 番剧 / 小说资源页（导航「生活」）
+
+仿资源网站的两个分区：`/anime/`（番剧）和 `/novel/`（小说），以卡片形式展示封面、简介、标签和资源链接（网盘/磁力/在线等任意链接），自带搜索框。
+
+**添加资源**：编辑数据文件 `source/js/resource-data/anime.js`（番剧）或 `novel.js`（小说），
+按文件顶部注释的格式复制一条 `{ ... }` 块填写即可，和填表一样简单：
+
+- `name` 名称（必填）· `cover` 封面（网络链接或 `/img/xxx.jpg`，留空显示占位封面）· `descr` 一句话简介 · `tags` 标签数组 · `links` 链接按钮数组
+- 改完推送部署，所有访客都能看到（数据在仓库里，和「个人设置」不同，这是全局生效的）
+- 页面结构：`source/anime/index.md`、`source/novel/index.md`；渲染脚本 `source/js/resource-page.js`；样式 `source/css/resource.css`
+- 写文章时把分类填成 `生活,番剧` 或 `生活,小说`，文章就会归入对应的生活子分类
+
+> ⚠️ 建议只收录合法公开的资源或正版链接。
+
 ### 更新日志（导航「关于 → 更新日志」弹窗）
 
 - 日志内容在 `source/log/index.md`，按里面 `timeline` 的格式添加新条目即可，和写文章一样简单
