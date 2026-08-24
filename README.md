@@ -81,24 +81,19 @@ git push
 
 ### 网页写文章（导航「写文章」）
 
-在网页里直接写 Markdown 并发布，无需打开代码编辑器。
+在网页里直接写 Markdown 并发布，无需打开代码编辑器。首次使用只需设置一次发布密钥：
 
-**登录**：点「GitHub 登录」→ 在 GitHub 授权页粘贴授权码并同意 → 自动回到登录状态（有效期 8 小时，过期重登即可）。
-这依赖一个免费中转服务（GitHub 不允许浏览器直连登录接口）：
+1. **生成令牌**：GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token
+   - Repository access：Only select repositories → 只勾 `cooooh/cooooh.github.io`
+   - Permissions：Contents → Read and write（其余不勾）
+   - 复制生成的令牌（`github_pat_` 开头，只显示一次）
+2. **保存令牌**：打开网站的「写文章」页 → 顶部「发布密钥」→ 粘贴令牌 → 保存（之后就不用再操作了）
 
-- 中转代码在 `relay/worker.js`（Cloudflare Workers 版）和 `relay/server.js`（Render 版），部署其一即可
-- 部署时把代码里的 `REPLACE_ME` 换成 GitHub OAuth App 的 Client ID（OAuth App 创建时需勾选 **Enable Device Flow**）
-- 部署后把中转服务网址填入 `source/js/post-editor.js` 的 `RELAY_URL`，重新部署网站
+然后正常填写标题/分类/标签/正文，点「发布」即可：脚本会把文章提交到仓库 `source/_posts/`，GitHub Actions 自动构建，**1~2 分钟后**文章上线。支持 Markdown 预览、草稿自动保存（本地浏览器）、同名文件更新。
 
-**发布**：填标题/分类/标签/正文 → 点「发布」→ 文章提交到仓库 `source/_posts/` → Actions 自动构建，1~2 分钟上线。支持 Markdown 预览、草稿自动保存、同名文件更新。
+> ⚠️ 安全说明：令牌只保存在你本机浏览器（localStorage），权限仅限本仓库的文章读写，不会随网站发送给任何第三方；换设备需要在设备上重新保存令牌，令牌不用了可在 GitHub 随时撤销。
 
-**高级备用**：登录区的「高级：手动粘贴令牌」支持传统 fine-grained PAT 方式：
-GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens，
-只授权 `cooooh/cooooh.github.io` 仓库的 Contents 读写，令牌粘贴保存即可。
-
-> ⚠️ 安全说明：登录凭据只保存在本机浏览器（localStorage），OAuth 令牌 8 小时自动过期，可随时退出登录或去 GitHub 撤销授权。
-
-相关代码：页面 `source/write/index.md`，脚本 `source/js/post-editor.js`，样式 `source/css/post-editor.css`，中转服务 `relay/`。
+相关代码：页面 `source/write/index.md`，脚本 `source/js/post-editor.js`，样式 `source/css/post-editor.css`。
 
 ### 更新日志（导航「关于 → 更新日志」弹窗）
 
