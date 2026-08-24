@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>写文章 | Snowtrace</title><meta name="author" content="Ykcht"><meta name="copyright" content="Ykcht"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写文章 ✍️在网页里直接写 Markdown 并发布：点「发布」后，脚本会通过 GitHub API 把文章提交到仓库，1~2 分钟后自动部署上线。          🔑 GitHub 令牌设置（首次使用必读）            打开 GitHub → 右上角头像 → Settings → 左下角 Developer settings → Personal access tokens → F">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>写文章 | Snowtrace</title><meta name="author" content="Ykcht"><meta name="copyright" content="Ykcht"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写文章 ✍️在网页里直接写 Markdown 并发布：点「发布」后，脚本会通过 GitHub API 把文章提交到仓库，1~2 分钟后自动部署上线。                 🔐 未登录——发布前请先登录                 GitHub 登录         退出登录                        ① 授权码已复制到剪贴板，点右侧按钮去 GitHub 粘贴并授">
 <meta property="og:type" content="website">
 <meta property="og:title" content="写文章">
 <meta property="og:url" content="https://snowtrace.top/write/index.html">
 <meta property="og:site_name" content="Snowtrace">
-<meta property="og:description" content="写文章 ✍️在网页里直接写 Markdown 并发布：点「发布」后，脚本会通过 GitHub API 把文章提交到仓库，1~2 分钟后自动部署上线。          🔑 GitHub 令牌设置（首次使用必读）            打开 GitHub → 右上角头像 → Settings → 左下角 Developer settings → Personal access tokens → F">
+<meta property="og:description" content="写文章 ✍️在网页里直接写 Markdown 并发布：点「发布」后，脚本会通过 GitHub API 把文章提交到仓库，1~2 分钟后自动部署上线。                 🔐 未登录——发布前请先登录                 GitHub 登录         退出登录                        ① 授权码已复制到剪贴板，点右侧按钮去 GitHub 粘贴并授">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://snowtrace.top/img/avatar.svg">
 <meta property="article:published_time" content="2026-08-21T10:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-24T11:44:35.688Z">
+<meta property="article:modified_time" content="2026-08-24T11:56:44.212Z">
 <meta property="article:author" content="Ykcht">
 <meta property="article:tag" content="Snowtrace,Ykcht,博客,学习笔记,项目,生活">
 <meta name="twitter:card" content="summary">
@@ -147,21 +147,39 @@
 }</script><link rel="stylesheet" href="/css/changelog.css"><link rel="stylesheet" href="/css/music.css"><link rel="stylesheet" href="/css/settings.css"><link rel="stylesheet" href="/css/post-editor.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/write/"><i class="fa-fw fas fa-pen-nib"></i><span> 写文章</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/log/"><i class="fa-fw fas fa-scroll"></i><span> 更新日志</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/favicon.svg" alt="Logo"><span class="site-name">Snowtrace</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/write/"><i class="fa-fw fas fa-pen-nib"></i><span> 写文章</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/log/"><i class="fa-fw fas fa-scroll"></i><span> 更新日志</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">写文章</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">写文章</div><div class="container" id="article-container"><h2 id="写文章-✍️"><a href="#写文章-✍️" class="headerlink" title="写文章 ✍️"></a>写文章 ✍️</h2><p>在网页里直接写 Markdown 并发布：点「发布」后，脚本会通过 GitHub API 把文章提交到仓库，1~2 分钟后自动部署上线。</p>
 <div class="post-editor-card" id="post-editor">
 
-  <details class="pe-token" id="pe-token-box">
-    <summary>🔑 GitHub 令牌设置（首次使用必读）</summary>
-    <ol>
-      <li>打开 GitHub → 右上角头像 → <b>Settings</b> → 左下角 <b>Developer settings</b> → <b>Personal access tokens</b> → <b>Fine-grained tokens</b> → <b>Generate new token</b></li>
-      <li><b>Repository access</b> 选 <b>Only select repositories</b>，只勾选 <code>cooooh/cooooh.github.io</code></li>
-      <li><b>Permissions</b> → <b>Contents</b> → 选 <b>Read and write</b>（其他权限一律不勾）</li>
-      <li>生成后<b>复制令牌（只显示一次）</b>，粘贴到下面保存</li>
-    </ol>
-    <div class="pe-token-row">
-      <input type="password" id="pe-token-input" placeholder="粘贴令牌（github_pat_ 开头）" autocomplete="off">
-      <button class="pe-btn" id="pe-token-save" type="button">保存令牌</button>
-      <button class="pe-btn ghost" id="pe-token-remove" type="button">移除令牌</button>
+  <div class="pe-auth">
+    <div class="pe-auth-top">
+      <span class="pe-auth-state" id="pe-auth-state">🔐 未登录——发布前请先登录</span>
+      <div class="pe-auth-actions">
+        <button class="pe-btn primary" id="pe-login-btn" type="button"><i class="fab fa-github"></i> GitHub 登录</button>
+        <button class="pe-btn ghost" id="pe-logout-btn" type="button">退出登录</button>
+      </div>
     </div>
-    <p class="pe-status" id="pe-token-status"></p>
-  </details>
+    <div class="pe-device hidden" id="pe-device-panel">
+      <p>① 授权码已复制到剪贴板，点右侧按钮去 GitHub 粘贴并授权：</p>
+      <div class="pe-device-row">
+        <code id="pe-user-code">XXXX-XXXX</code>
+        <button class="pe-btn" id="pe-open-device" type="button">打开 GitHub 授权页 →</button>
+      </div>
+      <p>② 授权完成后回到本页，会自动检测并登录（约 <span id="pe-countdown">--</span> 秒后授权码过期）。</p>
+    </div>
+    <p class="pe-status" id="pe-auth-status"></p>
+    <details class="pe-token">
+      <summary>高级：手动粘贴令牌（备用方式，一般用不到）</summary>
+      <ol>
+        <li>打开 GitHub → 右上角头像 → <b>Settings</b> → 左下角 <b>Developer settings</b> → <b>Personal access tokens</b> → <b>Fine-grained tokens</b> → <b>Generate new token</b></li>
+        <li><b>Repository access</b> 选 <b>Only select repositories</b>，只勾选 <code>cooooh/cooooh.github.io</code></li>
+        <li><b>Permissions</b> → <b>Contents</b> → 选 <b>Read and write</b>（其他权限一律不勾）</li>
+        <li>生成后<b>复制令牌（只显示一次）</b>，粘贴到下面保存</li>
+      </ol>
+      <div class="pe-token-row">
+        <input type="password" id="pe-token-input" placeholder="粘贴令牌（github_pat_ 开头）" autocomplete="off">
+        <button class="pe-btn" id="pe-token-save" type="button">保存令牌</button>
+        <button class="pe-btn ghost" id="pe-token-remove" type="button">移除令牌</button>
+      </div>
+      <p class="pe-status" id="pe-token-status"></p>
+    </details>
+  </div>
 
   <div class="pe-form">
     <div class="pe-row">
@@ -199,7 +217,7 @@
 
 </div>
 
-<p class="pe-note">说明：令牌只保存在你当前浏览器，权限仅限本仓库的文章写入，可随时在 GitHub 撤销；草稿自动保存在本地浏览器，刷新不丢失。</p>
+<p class="pe-note">说明：GitHub 登录有效期 8 小时，过期后重新点登录即可；登录凭据只保存在你当前浏览器，可随时点「退出登录」或去 GitHub 撤销授权；草稿自动保存在本地浏览器，刷新不丢失。</p>
 
 <script src="/js/vendor/marked.umd.js"></script>
 <script src="/js/post-editor.js"></script>
@@ -210,7 +228,7 @@
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/"><span class="card-category-list-name">生活</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">知识</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">项目</span><span class="card-category-list-count">1</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.5em; color: #99a9bf">博客</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">学习笔记</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">学习笔记</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.5em; color: #99a9bf">博客</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -229,4 +247,4 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2026-08-21T10:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">1.2k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-24T11:45:05.607Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By Ykcht</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div><div class="footer_custom_text">人生到处知何似，应似飞鸿踏雪泥。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script src="/js/changelog-modal.js"></script><script src="/js/music-page.js"></script><script src="/js/site-settings.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.5"></script></div></div></body></html>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2026-08-21T10:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">1.2k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-24T11:57:05.367Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By Ykcht</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div><div class="footer_custom_text">人生到处知何似，应似飞鸿踏雪泥。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script src="/js/changelog-modal.js"></script><script src="/js/music-page.js"></script><script src="/js/site-settings.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.5"></script></div></div></body></html>
