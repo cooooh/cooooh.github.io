@@ -226,8 +226,35 @@
     })
   }
 
+  /* ---------- 数据刷新（缓存穿透） ----------
+   * 数据 JS 文件会被浏览器/GitHub Pages 缓存（最长 10 分钟），
+   * 增删资源后直接刷新页面可能仍读到旧文件。这里用带时间戳的
+   * fetch 重新拉取一次，保证页面与仓库数据一致；拉取失败时
+   * 继续使用 <script> 标签加载到的数据兜底。
+   */
+
+  function refreshData () {
+    if (!pageScript) return Promise.resolve()
+    const src = pageScript.getAttribute('src') || ''
+    if (!src) return Promise.resolve()
+    return fetch(src + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(res => {
+        if (!res.ok) throw new Error('HTTP ' + res.status)
+        return res.text()
+      })
+      .then(text => {
+        new Function(text)() // 执行数据文件，重新赋值 window.SNOWTRACE_RESOURCES
+        const fresh = window.SNOWTRACE_RESOURCES || []
+        data.splice(0, data.length, ...fresh)
+        render()
+        attachDeleteBadges()
+      })
+      .catch(() => { /* 网络异常时用旧数据兜底 */ })
+  }
+
   /* ---------- 启动 ---------- */
 
   render()
   attachDeleteBadges()
+  refreshData()
 })()
