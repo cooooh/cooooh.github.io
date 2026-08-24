@@ -1,5 +1,31 @@
 /* ================= 资源页（番剧 / 小说） ================= */
 
+/* 添加资源入口 */
+.resource-addbar {
+  margin: 1rem 0 0.6rem;
+  text-align: right;
+}
+
+.resource-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 11px;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #49b1f5, #3b9fe0);
+  box-shadow: 0 4px 12px rgba(73, 177, 245, 0.28);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.resource-add-btn:hover {
+  box-shadow: 0 6px 16px rgba(73, 177, 245, 0.42);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
 .resource-search {
   display: block;
   width: 100%;

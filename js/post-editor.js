@@ -308,4 +308,11 @@
 
   refreshTokenUI()
   if (restoreDraft()) setStatus(statusEl, '已恢复上次未发布的草稿', true)
+
+  // 从分类页跳转过来时（/write/?category=知识），自动预填分类
+  const urlParams = new URLSearchParams(location.search)
+  const presetCategory = urlParams.get('category')
+  if (presetCategory && categoryEl && !categoryEl.value) {
+    categoryEl.value = presetCategory
+  }
 })()

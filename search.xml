@@ -62,6 +62,35 @@
       </tags>
   </entry>
   <entry>
+    <title>你好，Snowtrace</title>
+    <url>/2026/08/21/2026-08-21-hello-snowtrace/</url>
+    <content><![CDATA[<h2 id="开站啦-🎉"><a href="#开站啦-🎉" class="headerlink" title="开站啦 🎉"></a>开站啦 🎉</h2><p><strong>Snowtrace</strong> 今天正式上线。</p>
+<p>站名取自苏轼的诗句：</p>
+<blockquote>
+<p>人生到处知何似，应似飞鸿踏雪泥。</p>
+</blockquote>
+<p>人生的经历就像飞鸿在雪地上留下的爪印，转瞬即逝。而我希望用这个博客，把那些值得记住的痕迹留下来——学过的知识、做过的项目、还有生活的点滴。</p>
+<h2 id="这里会有什么"><a href="#这里会有什么" class="headerlink" title="这里会有什么"></a>这里会有什么</h2><ul>
+<li>📚 <strong>知识</strong>：计算机学习笔记，从基础开始，一步步来</li>
+<li>🛠 <strong>项目</strong>：做过的项目记录、搭建过程与复盘</li>
+<li>🍃 <strong>生活</strong>：日常随想、读书、音乐、旅行</li>
+</ul>
+<h2 id="为什么自己搭博客"><a href="#为什么自己搭博客" class="headerlink" title="为什么自己搭博客"></a>为什么自己搭博客</h2><ol>
+<li><strong>输出是最好的输入</strong>——把学到的东西写出来，才能真正变成自己的</li>
+<li><strong>拥有自己的空间</strong>——不受平台限制，完全掌控自己的内容</li>
+<li><strong>顺便学习</strong>——搭建博客本身就是一个项目，用到了 Git、Markdown、GitHub Actions……</li>
+</ol>
+<p>接下来的第一件事，就是把搭博客的过程写成一篇「项目」文章，也算是个纪念。</p>
+<p>如果你恰好路过，欢迎常来坐坐。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git 入门：常用命令速查</title>
     <url>/2026/08/21/2026-08-21-git-common-commands/</url>
     <content><![CDATA[<h2 id="为什么学-Git"><a href="#为什么学-Git" class="headerlink" title="为什么学 Git"></a>为什么学 Git</h2><p>Git 是程序员最基础也最重要的工具之一：管理代码版本、和他人协作、备份自己的项目，全都靠它。这篇笔记记录我学习 Git 时整理的常用命令，随学随补。</p>
@@ -110,35 +139,6 @@
       <tags>
         <tag>Git</tag>
         <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，Snowtrace</title>
-    <url>/2026/08/21/2026-08-21-hello-snowtrace/</url>
-    <content><![CDATA[<h2 id="开站啦-🎉"><a href="#开站啦-🎉" class="headerlink" title="开站啦 🎉"></a>开站啦 🎉</h2><p><strong>Snowtrace</strong> 今天正式上线。</p>
-<p>站名取自苏轼的诗句：</p>
-<blockquote>
-<p>人生到处知何似，应似飞鸿踏雪泥。</p>
-</blockquote>
-<p>人生的经历就像飞鸿在雪地上留下的爪印，转瞬即逝。而我希望用这个博客，把那些值得记住的痕迹留下来——学过的知识、做过的项目、还有生活的点滴。</p>
-<h2 id="这里会有什么"><a href="#这里会有什么" class="headerlink" title="这里会有什么"></a>这里会有什么</h2><ul>
-<li>📚 <strong>知识</strong>：计算机学习笔记，从基础开始，一步步来</li>
-<li>🛠 <strong>项目</strong>：做过的项目记录、搭建过程与复盘</li>
-<li>🍃 <strong>生活</strong>：日常随想、读书、音乐、旅行</li>
-</ul>
-<h2 id="为什么自己搭博客"><a href="#为什么自己搭博客" class="headerlink" title="为什么自己搭博客"></a>为什么自己搭博客</h2><ol>
-<li><strong>输出是最好的输入</strong>——把学到的东西写出来，才能真正变成自己的</li>
-<li><strong>拥有自己的空间</strong>——不受平台限制，完全掌控自己的内容</li>
-<li><strong>顺便学习</strong>——搭建博客本身就是一个项目，用到了 Git、Markdown、GitHub Actions……</li>
-</ol>
-<p>接下来的第一件事，就是把搭博客的过程写成一篇「项目」文章，也算是个纪念。</p>
-<p>如果你恰好路过，欢迎常来坐坐。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
 </search>
