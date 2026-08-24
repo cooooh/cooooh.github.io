@@ -13,21 +13,5 @@
  * ⚠️ 建议只收录合法公开的资源或正版链接。
  */
 window.SNOWTRACE_RESOURCES = [
-[
-  {
-    "name": "示例：三体",
-    "cover": "",
-    "descr": "这是一条示例数据，按上方注释的格式替换成你自己的小说资源即可。",
-    "tags": [
-      "科幻",
-      "示例"
-    ],
-    "links": [
-      {
-        "text": "在线阅读",
-        "url": "https://www.example.com"
-      }
-    ]
-  }
-]
+[]
 ]
