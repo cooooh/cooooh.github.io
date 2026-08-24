@@ -48,14 +48,22 @@
     }
   }
 
+  /* ---------- 3. 移除作者卡片里的「标签」计数链接（标签页已下线） ---------- */
+
+  function removeTagLinks () {
+    document.querySelectorAll('.site-data a[href="/tags/"]').forEach(el => el.remove())
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     buildSubMenu()
     buildCategoryButton()
+    removeTagLinks()
   })
 
   // 兼容 pjax
   document.addEventListener('pjax:complete', () => {
     buildSubMenu()
     buildCategoryButton()
+    removeTagLinks()
   })
 })()
