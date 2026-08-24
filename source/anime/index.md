@@ -10,6 +10,7 @@ comments: false
 收录看过/想看的番剧资源。
 
 <div class="resource-page">
+  <p class="resource-addbar"><a class="resource-add-btn" href="/resource-add/?type=anime"><i class="fas fa-plus"></i> 添加资源</a></p>
   <input type="search" id="resource-search" class="resource-search" placeholder="搜索标题 / 简介 / 标签…">
   <div class="resource-grid" id="resource-grid"></div>
   <p class="resource-empty hidden" id="resource-empty"></p>

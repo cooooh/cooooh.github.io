@@ -20,14 +20,14 @@ nav:
 menu:
   首页: / || fas fa-home
   归档: /archives/ || fas fa-archive
-  分类: /categories/ || fas fa-folder-open
+  分类||fas fa-folder-open:
+    知识: /categories/知识/ || fas fa-lightbulb
+    项目: /categories/项目/ || fas fa-code
+    生活: /categories/生活/ || fas fa-coffee
   标签: /tags/ || fas fa-tags
   友链: /link/ || fas fa-link
   音乐: /music/ || fas fa-music
   写文章: /write/ || fas fa-pen-nib
-  生活||fas fa-coffee:
-    番剧: /anime/ || fas fa-tv
-    小说: /novel/ || fas fa-book
   关于||fas fa-heart:
     个人设置: /about/ || fas fa-user-cog
     更新日志: /log/ || fas fa-scroll
@@ -1078,6 +1078,8 @@ inject:
     - <link rel="stylesheet" href="/css/post-editor.css">
     # 资源页（番剧/小说卡片）样式
     - <link rel="stylesheet" href="/css/resource.css">
+    # 导航二级下拉与分类页按钮样式
+    - <link rel="stylesheet" href="/css/nav-extend.css">
   bottom:
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
@@ -1085,6 +1087,8 @@ inject:
     - <script src="/js/music-page.js"></script>
     # 个人设置脚本（关于页更换头像/首页背景，全局自动应用）
     - <script src="/js/site-settings.js"></script>
+    # 导航二级下拉 + 分类页写文章入口
+    - <script src="/js/nav-enhance.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work

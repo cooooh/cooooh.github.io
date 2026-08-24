@@ -1,0 +1,70 @@
+/* ================= 导航二级下拉菜单 ================= */
+
+.menus_item_child li {
+  position: relative;
+}
+
+.menus_item_child .menus_item_subchild {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 130px;
+  padding: 6px 0;
+  margin: 0;
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px rgba(64, 128, 180, 0.22);
+  list-style: none;
+  z-index: 100;
+}
+
+.menus_item_child li:hover .menus_item_subchild {
+  display: block;
+}
+
+.menus_item_subchild a {
+  display: block;
+  padding: 6px 16px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menus_item_subchild a:hover {
+  background: rgba(73, 177, 245, 0.12);
+}
+
+/* 手机端：抽屉菜单里改为平铺缩进显示（没有悬停） */
+@media screen and (max-width: 768px) {
+  .menus_item_child .menus_item_subchild {
+    display: block;
+    position: static;
+    padding: 0 0 0 14px;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
+  }
+}
+
+/* ================= 分类页「写文章」按钮 ================= */
+
+.category-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 16px;
+  padding: 9px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #49b1f5, #3b9fe0);
+  box-shadow: 0 4px 14px rgba(73, 177, 245, 0.3);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.category-add-btn:hover {
+  box-shadow: 0 6px 18px rgba(73, 177, 245, 0.45);
+  transform: translateY(-1px);
+  color: #fff;
+}
