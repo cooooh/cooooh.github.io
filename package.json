@@ -29,6 +29,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-butterfly": "^5.5.5",
     "hexo-wordcount": "^6.0.1",
+    "marked": "^18.0.10",
     "typed.js": "^3.0.0"
   }
 }

@@ -79,6 +79,22 @@ git push
 - 网易云歌单 ID 获取：网易云 App → 歌单 → 分享 → 复制链接，链接里 `id=` 后面的数字就是
 - 唱片封面自动跟随当前歌曲显示，播放器本身只在音乐页加载，不影响其他页面速度
 
+### 网页写文章（导航「写文章」）
+
+在网页里直接写 Markdown 并发布，无需打开代码编辑器。首次使用需要两步：
+
+1. **生成 GitHub 令牌**：GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token
+   - Repository access：Only select repositories → 只勾 `cooooh/cooooh.github.io`
+   - Permissions：Contents → Read and write（其余不勾）
+   - 复制生成的令牌（`github_pat_` 开头，只显示一次）
+2. **保存令牌**：打开网站的「写文章」页 → 顶部「GitHub 令牌设置」→ 粘贴令牌 → 保存（之后就不用再操作了）
+
+然后正常填写标题/分类/标签/正文，点「发布」即可：脚本会把文章提交到仓库 `source/_posts/`，GitHub Actions 自动构建，**1~2 分钟后**文章上线。支持 Markdown 实时预览、草稿自动保存（本地浏览器）、同名文件更新。
+
+> ⚠️ 安全说明：令牌只保存在你本机浏览器（localStorage），权限仅限本仓库的文章读写，不会随网站发送给任何第三方；换设备需要在设备上重新保存令牌，令牌不用了可在 GitHub 随时撤销。
+
+相关代码：页面 `source/write/index.md`，脚本 `source/js/post-editor.js`，样式 `source/css/post-editor.css`。
+
 ### 更新日志（导航「关于 → 更新日志」弹窗）
 
 - 日志内容在 `source/log/index.md`，按里面 `timeline` 的格式添加新条目即可，和写文章一样简单

@@ -1,0 +1,250 @@
+/* ================= 网页发文：写文章页 ================= */
+
+.post-editor-card {
+  position: relative;
+  margin: 1.2rem 0 1rem;
+  padding: 18px 22px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(238, 247, 255, 0.66) 100%);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  backdrop-filter: blur(20px) saturate(1.6);
+  box-shadow: 0 8px 28px rgba(64, 128, 180, 0.16);
+  overflow: hidden;
+}
+
+[data-theme='dark'] .post-editor-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(30, 33, 40, 0.9) 0%, rgba(24, 32, 44, 0.82) 100%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* 令牌设置折叠区 */
+.pe-token {
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border: 1px dashed rgba(128, 128, 128, 0.35);
+  border-radius: 12px;
+  background: rgba(128, 128, 128, 0.05);
+}
+
+.pe-token summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.pe-token-ok {
+  color: #2e9e5b;
+}
+
+.pe-token ol {
+  margin: 10px 0 8px;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+.pe-token-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 表单 */
+.pe-form .pe-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pe-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.pe-form input,
+.pe-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--font-color);
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+[data-theme='dark'] .pe-form input,
+[data-theme='dark'] .pe-form textarea {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.pe-form input:focus,
+.pe-form textarea:focus {
+  outline: none;
+  border-color: #49b1f5;
+  box-shadow: 0 0 0 3px rgba(73, 177, 245, 0.18);
+}
+
+.pe-form textarea {
+  min-height: 420px;
+  resize: vertical;
+  font-family: Consolas, 'Courier New', monospace;
+  line-height: 1.7;
+}
+
+/* 预览面板 */
+.pe-preview {
+  margin-top: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.8;
+  max-height: 560px;
+  overflow-y: auto;
+}
+
+[data-theme='dark'] .pe-preview {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pe-preview.hidden {
+  display: none;
+}
+
+/* 预览时正文与预览左右分栏 */
+.post-editor-card.pe-previewing .pe-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 14px;
+}
+
+.post-editor-card.pe-previewing .pe-form > * {
+  grid-column: 1 / -1;
+}
+
+.post-editor-card.pe-previewing label:has(textarea) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.post-editor-card.pe-previewing .pe-preview {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 6px;
+  max-height: none;
+}
+
+/* 按钮与状态 */
+.pe-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.pe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--font-color);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(73, 177, 245, 0.35);
+  transition: all 0.2s;
+  user-select: none;
+  font-family: inherit;
+}
+
+.pe-btn:hover {
+  border-color: #49b1f5;
+  box-shadow: 0 2px 10px rgba(73, 177, 245, 0.25);
+  transform: translateY(-1px);
+}
+
+.pe-btn.primary {
+  background: linear-gradient(135deg, #49b1f5, #3b9fe0);
+  border-color: transparent;
+  color: #fff;
+}
+
+.pe-btn.primary:hover {
+  box-shadow: 0 4px 14px rgba(73, 177, 245, 0.4);
+}
+
+.pe-btn.ghost {
+  background: transparent;
+  border-color: rgba(128, 128, 128, 0.35);
+  opacity: 0.8;
+}
+
+.pe-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+[data-theme='dark'] .pe-btn {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pe-status {
+  font-size: 13px;
+  min-height: 18px;
+  margin-top: 10px;
+  color: var(--theme-color, #49b1f5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.pe-status.show {
+  opacity: 1;
+}
+
+.pe-status.ok {
+  color: #2e9e5b;
+}
+
+.pe-status.warn {
+  color: #e07b4a;
+}
+
+.pe-status a {
+  margin: 0 2px;
+  text-decoration: underline;
+}
+
+.pe-note {
+  font-size: 12px;
+  line-height: 1.9;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 768px) {
+  .pe-form .pe-row,
+  .post-editor-card.pe-previewing .pe-form,
+  .post-editor-card.pe-previewing label:has(textarea),
+  .post-editor-card.pe-previewing .pe-preview {
+    display: block;
+  }
+
+  .pe-form textarea {
+    min-height: 300px;
+  }
+}

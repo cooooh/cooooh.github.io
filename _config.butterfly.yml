@@ -24,6 +24,7 @@ menu:
   标签: /tags/ || fas fa-tags
   友链: /link/ || fas fa-link
   音乐: /music/ || fas fa-music
+  写文章: /write/ || fas fa-pen-nib
   关于||fas fa-heart:
     关于我: /about/ || fas fa-user
     更新日志: /log/ || fas fa-scroll
@@ -1070,6 +1071,8 @@ inject:
     - <link rel="stylesheet" href="/css/music.css">
     # 个人设置（头像/首页背景更换）样式
     - <link rel="stylesheet" href="/css/settings.css">
+    # 网页发文（写文章页）样式
+    - <link rel="stylesheet" href="/css/post-editor.css">
   bottom:
     # 更新日志弹窗脚本
     - <script src="/js/changelog-modal.js"></script>
