@@ -233,8 +233,9 @@
     lines.push('date: ' + t.full)
     const tags = tagsEl.value.split(/[,，]/).map(s => s.trim()).filter(Boolean)
     if (tags.length) lines.push('tags: [' + tags.join(', ') + ']')
-    const category = categoryEl.value.trim()
-    if (category) lines.push('categories: [' + category + ']')
+    // 分类支持多级：用逗号分隔，如「生活,番剧」→ categories: [生活, 番剧]
+    const categories = categoryEl.value.split(/[,，]/).map(s => s.trim()).filter(Boolean)
+    if (categories.length) lines.push('categories: [' + categories.join(', ') + ']')
     const description = descEl.value.trim()
     if (description) lines.push('description: ' + description)
     lines.push('---')
