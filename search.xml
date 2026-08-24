@@ -1,57 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git 入门：常用命令速查</title>
-    <url>/2026/08/21/2026-08-21-git-common-commands/</url>
-    <content><![CDATA[<h2 id="为什么学-Git"><a href="#为什么学-Git" class="headerlink" title="为什么学 Git"></a>为什么学 Git</h2><p>Git 是程序员最基础也最重要的工具之一：管理代码版本、和他人协作、备份自己的项目，全都靠它。这篇笔记记录我学习 Git 时整理的常用命令，随学随补。</p>
-<h2 id="配置与基本概念"><a href="#配置与基本概念" class="headerlink" title="配置与基本概念"></a>配置与基本概念</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 首次使用，设置身份（替换成你自己的名字和邮箱）</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Ykcht&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<p>Git 有三个区域：</p>
-<table>
-<thead>
-<tr>
-<th>区域</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>工作区</td>
-<td>你电脑里正在修改的文件</td>
-</tr>
-<tr>
-<td>暂存区</td>
-<td>准备提交的文件（<code>git add</code> 之后）</td>
-</tr>
-<tr>
-<td>仓库</td>
-<td>已经提交的历史（<code>git commit</code> 之后）</td>
-</tr>
-</tbody></table>
-<h2 id="日常最常用的命令"><a href="#日常最常用的命令" class="headerlink" title="日常最常用的命令"></a>日常最常用的命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init                  <span class="comment"># 在当前目录初始化仓库</span></span><br><span class="line">git status                <span class="comment"># 查看当前状态（最常用的命令！）</span></span><br><span class="line">git add 文件名            <span class="comment"># 把文件加入暂存区</span></span><br><span class="line">git add .                 <span class="comment"># 把所有改动加入暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;说明&quot;</span>      <span class="comment"># 提交，写清楚这次改了什么</span></span><br><span class="line">git <span class="built_in">log</span> --oneline         <span class="comment"># 一行一条地查看提交历史</span></span><br><span class="line">git diff                  <span class="comment"># 查看还没 add 的改动</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="分支与远程"><a href="#分支与远程" class="headerlink" title="分支与远程"></a>分支与远程</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch                <span class="comment"># 查看本地分支</span></span><br><span class="line">git branch 分支名         <span class="comment"># 创建分支</span></span><br><span class="line">git checkout 分支名       <span class="comment"># 切换分支（新版本可用 git switch 分支名）</span></span><br><span class="line">git merge 分支名          <span class="comment"># 把分支合并到当前分支</span></span><br><span class="line"></span><br><span class="line">git remote add origin 仓库地址   <span class="comment"># 关联远程仓库（只需一次）</span></span><br><span class="line">git push -u origin main         <span class="comment"># 推送到远程（首次）</span></span><br><span class="line">git push                       <span class="comment"># 之后直接 push 即可</span></span><br><span class="line">git pull                       <span class="comment"># 拉取远程最新代码</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="撤销与找回"><a href="#撤销与找回" class="headerlink" title="撤销与找回"></a>撤销与找回</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git restore 文件名        <span class="comment"># 丢弃工作区的改动（回到上次 add/commit 的状态）</span></span><br><span class="line">git reset HEAD 文件名     <span class="comment"># 把文件移出暂存区（不丢改动）</span></span><br><span class="line">git reset --hard HEAD~1   <span class="comment"># 撤销最近一次提交（慎用！）</span></span><br><span class="line">git reflog                <span class="comment"># 查看所有操作记录，误操作后找回用</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><ul>
-<li><code>git status</code> 是万能起点：不知道发生了什么，先敲它</li>
-<li>提交信息写清楚「做了什么」，三个月后的你会感谢现在的自己</li>
-<li>不熟悉时多用 <code>git log</code>、<code>git status</code> 看，不要背命令</li>
-<li>遇到问题直接搜报错信息，Git 的报错通常很直白</li>
-</ul>
-<blockquote>
-<p>本文持续更新中，随着学习深入会补充更多内容。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>知识</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目：用 Hexo 搭建 Snowtrace 博客</title>
     <url>/2026/08/21/2026-08-21-build-blog-with-hexo/</url>
     <content><![CDATA[<h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><p>一直想有一个自己的博客，用来记录学过的知识、做过的项目和日常生活。比较了多种方案后，最终选择了 <strong>Hexo + Butterfly 主题</strong>，部署在 <strong>GitHub Pages</strong>。</p>
@@ -139,6 +88,57 @@
       </categories>
       <tags>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 入门：常用命令速查</title>
+    <url>/2026/08/21/2026-08-21-git-common-commands/</url>
+    <content><![CDATA[<h2 id="为什么学-Git"><a href="#为什么学-Git" class="headerlink" title="为什么学 Git"></a>为什么学 Git</h2><p>Git 是程序员最基础也最重要的工具之一：管理代码版本、和他人协作、备份自己的项目，全都靠它。这篇笔记记录我学习 Git 时整理的常用命令，随学随补。</p>
+<h2 id="配置与基本概念"><a href="#配置与基本概念" class="headerlink" title="配置与基本概念"></a>配置与基本概念</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 首次使用，设置身份（替换成你自己的名字和邮箱）</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Ykcht&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+
+<p>Git 有三个区域：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>工作区</td>
+<td>你电脑里正在修改的文件</td>
+</tr>
+<tr>
+<td>暂存区</td>
+<td>准备提交的文件（<code>git add</code> 之后）</td>
+</tr>
+<tr>
+<td>仓库</td>
+<td>已经提交的历史（<code>git commit</code> 之后）</td>
+</tr>
+</tbody></table>
+<h2 id="日常最常用的命令"><a href="#日常最常用的命令" class="headerlink" title="日常最常用的命令"></a>日常最常用的命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init                  <span class="comment"># 在当前目录初始化仓库</span></span><br><span class="line">git status                <span class="comment"># 查看当前状态（最常用的命令！）</span></span><br><span class="line">git add 文件名            <span class="comment"># 把文件加入暂存区</span></span><br><span class="line">git add .                 <span class="comment"># 把所有改动加入暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;说明&quot;</span>      <span class="comment"># 提交，写清楚这次改了什么</span></span><br><span class="line">git <span class="built_in">log</span> --oneline         <span class="comment"># 一行一条地查看提交历史</span></span><br><span class="line">git diff                  <span class="comment"># 查看还没 add 的改动</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分支与远程"><a href="#分支与远程" class="headerlink" title="分支与远程"></a>分支与远程</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch                <span class="comment"># 查看本地分支</span></span><br><span class="line">git branch 分支名         <span class="comment"># 创建分支</span></span><br><span class="line">git checkout 分支名       <span class="comment"># 切换分支（新版本可用 git switch 分支名）</span></span><br><span class="line">git merge 分支名          <span class="comment"># 把分支合并到当前分支</span></span><br><span class="line"></span><br><span class="line">git remote add origin 仓库地址   <span class="comment"># 关联远程仓库（只需一次）</span></span><br><span class="line">git push -u origin main         <span class="comment"># 推送到远程（首次）</span></span><br><span class="line">git push                       <span class="comment"># 之后直接 push 即可</span></span><br><span class="line">git pull                       <span class="comment"># 拉取远程最新代码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="撤销与找回"><a href="#撤销与找回" class="headerlink" title="撤销与找回"></a>撤销与找回</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git restore 文件名        <span class="comment"># 丢弃工作区的改动（回到上次 add/commit 的状态）</span></span><br><span class="line">git reset HEAD 文件名     <span class="comment"># 把文件移出暂存区（不丢改动）</span></span><br><span class="line">git reset --hard HEAD~1   <span class="comment"># 撤销最近一次提交（慎用！）</span></span><br><span class="line">git reflog                <span class="comment"># 查看所有操作记录，误操作后找回用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><ul>
+<li><code>git status</code> 是万能起点：不知道发生了什么，先敲它</li>
+<li>提交信息写清楚「做了什么」，三个月后的你会感谢现在的自己</li>
+<li>不熟悉时多用 <code>git log</code>、<code>git status</code> 看，不要背命令</li>
+<li>遇到问题直接搜报错信息，Git 的报错通常很直白</li>
+</ul>
+<blockquote>
+<p>本文持续更新中，随着学习深入会补充更多内容。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>知识</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
 </search>
