@@ -24,10 +24,8 @@ menu:
     知识: /categories/知识/ || fas fa-lightbulb
     项目: /categories/项目/ || fas fa-code
     生活: /categories/生活/ || fas fa-coffee
-  标签: /tags/ || fas fa-tags
   友链: /link/ || fas fa-link
   音乐: /music/ || fas fa-music
-  写文章: /write/ || fas fa-pen-nib
   关于||fas fa-heart:
     个人设置: /about/ || fas fa-user-cog
     更新日志: /log/ || fas fa-scroll
@@ -290,7 +288,7 @@ aside:
   position: right
   display:
     archive: true
-    tag: true
+    tag: false
     category: true
   card_author:
     enable: true
