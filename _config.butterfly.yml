@@ -1108,6 +1108,9 @@ CDN:
   custom_format:
 
   option:
+    # 图标库锁定 Font Awesome 6.5.2（自托管，与主题模板完全兼容；
+    # 主题默认的 7.x 新渲染机制会导致旧版类名图标显示为 ×）
+    fontawesome: /vendor/fa/css/all.min.css?v=6.5.2
     # abcjs_basic_js:
     # activate_power_mode:
     # algolia_js:
