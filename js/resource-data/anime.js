@@ -13,21 +13,16 @@
  * ⚠️ 建议只收录合法公开的资源或正版链接。
  */
 window.SNOWTRACE_RESOURCES = [
+[
   {
-    name: '示例：你的名字。',
-    cover: '',
-    descr: '这是一条示例数据，按上方注释的格式替换成你自己的番剧资源即可。',
-    tags: ['剧场版', '示例'],
-    links: [
-      { text: '在线观看', url: 'https://www.example.com' },
-      { text: '网盘', url: 'https://www.example.com' }
-    ]
-  },
-  {
-    name: '示例：葬送的芙莉莲',
-    cover: '',
-    descr: '第二条示例数据，演示多个条目如何排列。',
-    tags: ['奇幻', '示例'],
-    links: []
+    "name": "示例：葬送的芙莉莲",
+    "cover": "",
+    "descr": "第二条示例数据，演示多个条目如何排列。",
+    "tags": [
+      "奇幻",
+      "示例"
+    ],
+    "links": []
   }
+]
 ]
